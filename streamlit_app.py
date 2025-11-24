@@ -45,7 +45,7 @@ if "last_prediction" not in st.session_state:
 # ======================
 # 모델 로드
 # ======================
-FILE_ID = st.secrets.get("GDRIVE_FILE_ID", "1uj2lD8goJDLo9uSg_8HcT4bxnl2trPc8")
+FILE_ID = st.secrets.get("GDRIVE_FILE_ID", "1NzipjExaJ73U96LgqxQVYRgOwZ9v6UdR")
 MODEL_PATH = st.secrets.get("MODEL_PATH", "model.pkl")
 
 @st.cache_resource
@@ -74,6 +74,11 @@ CONTENT_BY_LABEL: dict[str, dict[str, list[str]]] = {
     #   "images": ["https://.../jjampong1.jpg", "https://.../jjampong2.jpg"],
     #   "videos": ["https://youtu.be/XXXXXXXXXXX"]
     # },
+    labels[0] : {"texts" : ["중국식 냉면은 차가워"], "images" : ["https://www.google.com/url?sa=i&url=https%3A%2F%2Fwtable.co.kr%2Frecipes%2FfCZFM5bTYZMU4saAcWR413Jy&psig=AOvVaw13G3tNVhYraLPMh1qucFSP&ust=1764041478004000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKiMj8vsiZEDFQAAAAAdAAAAABAE]},
+    labels[1] : {"texts" : ["짜장면 원합니다 "], "images" : ["https://www.google.com/url?sa=i&url=https%3A%2F%2F8dogam.com%2Fproduct%2F3a4004fdb9ba468a24315e080ea480f1%3Ftab%3Dreviews%26showOnlyPhotoReview%3Dfalse%26orderBy%3DRECOMMENDATION%26srsltid%3DAfmBOoobf0w5MP0jLqBzLaH8O8shx91iRlXTY_Rs1MaY5jTdnpWOWEkV&psig=AOvVaw3EkXyE5CCcZejQQMKoEjwF&ust=1764041518122000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPDW5dvsiZEDFQAAAAAdAAAAABAE]},
+    labels[2] : {"texts" : ["짬뽕 뜨거워"], "images" : ["https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.kurly.com%2Fgoods%2F1000205851&psig=AOvVaw2ybSqn4DOnmh-9HoR8cMkF&ust=1764041781833000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKDN2tvtiZEDFQAAAAAdAAAAABAE]},
+    labels[3] : {"texts" : ["탕수육은 따가워"], "images" : ["https://www.google.com/url?sa=i&url=https%3A%2F%2Fnamu.wiki%2Fw%2F%25ED%2583%2595%25EC%2588%2598%25EC%259C%25A1%3Fuuid%3D874cfde6-1c0a-4886-8ede-57a4050f7b41&psig=AOvVaw3LhaUqGfXn4MJzjR9jL-Ze&ust=1764041843321000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCKD98PjtiZEDFQAAAAAdAAAAABAE]},
+    
 }
 
 # ======================
